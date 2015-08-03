@@ -1,0 +1,162 @@
+/*All Devices*/
+
+/*Custom Navbar*/
+.navbar-custom {
+    background: rgb(125, 126, 125); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(125, 126, 125, 1) 0%, rgba(14, 14, 14, 1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(125, 126, 125, 1)), color-stop(100%, rgba(14, 14, 14, 1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(125, 126, 125, 1) 0%, rgba(14, 14, 14, 1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(125, 126, 125, 1) 0%, rgba(14, 14, 14, 1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(125, 126, 125, 1) 0%, rgba(14, 14, 14, 1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(125, 126, 125, 1) 0%, rgba(14, 14, 14, 1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7d7e7d', endColorstr='#0e0e0e', GradientType=0); /* IE6-9 */
+    outline: none;
+    border-radius: 5px;
+    border: none;
+}
+
+.navbar-custom .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+.navbar-custom .navbar-toggle {
+    border-color: #333
+}
+
+.navbar-custom .navbar-toggle:active {
+    background-color: #333;
+}
+
+.navbar-custom .navbar-toggle .icon-bar {
+    background-color: #fff
+}
+
+.navbar-custom .navbar-collapse, .navbar-custom .navbar-form {
+    border-color: #101010
+}
+
+/* The Colour of the Non-Active Navbar Links */
+.navbar-custom .navbar-nav > li > a {
+    color: #ffffff;
+}
+
+/* The Colour of the Active Navbar Link */
+.navbar-custom .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
+    color: #ffffff;
+    background-color: #6b312d;
+}
+
+/*Mobile Devices*/
+@media (max-width: 767px) {
+
+    /* Backgrounds */
+    body {
+        width: 100%;
+        background: url("../images/backgrounds/Background-Cut.png") repeat fixed center;
+        background-size: cover;
+    }
+
+    /* Banners */
+    .banner {
+        content: url("../images/logos/loabannerlogo.png");
+        width: 97px;
+        height: auto;
+        color: #ffffff;
+        padding-top: 5%;
+        padding-bottom: 2%;
+        position: relative;
+    }
+
+    .banner-position {
+        text-align: center;
+    }
+
+    .container-custom {
+        width: 100%;
+        padding-right: 2px;
+        padding-left: 2px;
+    }
+
+    .container-fluid > .navbar-collapse, .container-fluid > .navbar-header, .container > .navbar-collapse, .container > .navbar-header {
+        margin-right: -15px;
+        margin-left: -15px
+    }
+
+    .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+        border-color: #101010
+    }
+
+    .btn-group-vertical > .btn-group:after, .btn-toolbar:after, .clearfix:after, .container-custom:after, .container:after, .dl-horizontal dd:after, .form-horizontal .form-group:after, .modal-footer:after, .nav:after, .navbar-collapse:after, .navbar-header:after, .navbar:after, .pager:after, .panel-body:after, .row:after {
+        clear: both;
+    }
+
+    .main-container {
+        padding-top: 10px;
+        width: 100%;
+        padding-right: 2px;
+        padding-left: 2px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+
+}
+
+/*Desktop Devices*/
+@media (min-width: 768px) {
+
+    /*Backgrounds*/
+    body {
+        width: 100%;
+        background: url("../images/backgrounds/Background.jpg") no-repeat fixed center;
+        background-size: cover;
+    }
+
+    /* Banners */
+    .banner {
+        color: #ffffff;
+        padding-top: 5%;
+        padding-bottom: 2%;
+        text-align: left;
+        position: relative;
+    }
+
+    .banner-position {
+        text-align: left;
+    }
+
+    .container-custom {
+        width: 60%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto
+    }
+
+    .main-container {
+        padding-top: 10px;
+        width: 60%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+
+    .container-custom > .navbar-collapse, .container-fluid > .navbar-header, .container > .navbar-collapse, .container > .navbar-header {
+        margin-right: -15px;
+        margin-left: -15px
+    }
+
+    @media (min-width: 768px) {
+        .container-custom > .navbar-collapse, .container-custom > .navbar-header, .container > .navbar-collapse, .container > .navbar-header {
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
+
+    .btn-group-vertical > .btn-group:after, .btn-toolbar:after, .clearfix:after, .container-custom:after, .container:after, .dl-horizontal dd:after, .form-horizontal .form-group:after, .modal-footer:after, .nav:after, .navbar-collapse:after, .navbar-header:after, .navbar:after, .pager:after, .panel-body:after, .row:after {
+        clear: both;
+    }
+
+}
