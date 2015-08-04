@@ -9,7 +9,6 @@
 
     <!-- External Libraries -->
 
-    <?php echo $_SERVER['DOCUMENT_ROOT'] ?>
     <!-- JQuery -->
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 
