@@ -5,15 +5,13 @@
 //Initialise the NavBar
 
 var navContainer = document.getElementById("navContainer");
-var banner = document.getElementById("banner");
-var navBar = document.getElementById("navbar");
 
 function initializeNavbar() {
 
     $bannerCSS = "<div class='banner-position'><a href='http://www.leagueofassassins.co.uk'><img class='banner' src='http://www.leagueofassassins.co.uk/images/logos/Logo%20for%20LoA.png'></a></div>";
 
     //Initial Class
-    $initialNavCSS =  "<nav class='navbar-static-top navbar-custom'>";
+    $initialNavCSS = "<nav class='navbar-static-top navbar-custom'>";
 
     //Mobile Button Div and Hamburger
     $buttonDiv = " <div class='navbar-header'>" +
@@ -37,18 +35,18 @@ function initializeNavbar() {
 
     $closingStuff = "</nav>";
 
-    navContainer.innerHTML = $bannerCSS + " " + $initialNavCSS + " " + $buttonDiv + " " + $navBarContentDiv + " " + $closingStuff;
+    if (navContainer != null) {
+        navContainer.innerHTML = $bannerCSS + " " + $initialNavCSS + " " + $buttonDiv + " " + $navBarContentDiv + " " + $closingStuff;
+    } else {
+        console.log("NAVBAR IS NULL");
+    }
 }
 
-function getCategory(){
-    var filename = url.substring(url.lastIndexOf('/')+1);
+function getCategory() {
+    var filename = url.substring(url.lastIndexOf('/') + 1);
 
-   if(filename=="index.html"){
+    if (filename == "index.html") {
 
-   }
+    }
 }
 initializeNavbar();
-
-$(".bs-example-navbar-collapse-1").mouseup(function(){
-    $(this).blur();
-});

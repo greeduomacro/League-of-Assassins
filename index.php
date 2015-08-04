@@ -12,25 +12,25 @@
     require('./wp/wp-blog-header.php');
     ?>
 
+    <!-- External Libraries -->
+
     <!-- JQuery -->
-    <script src="/js/jquery/jquery-2.1.4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="/css/bootstrap/bootstrap-theme.min.css">
-
-    <!-- My Custom Styles -->
-    <link rel="stylesheet" href="/css/xs-sm-main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
     <!-- Latest compiled and minified JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-    <script src="js/initialize.js"></script>
+    <!-- Local Libraries -->
+
+    <!-- My Custom Styles -->
+    <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/css/navbar.css">
+
 
     <!-- Favicons for all devices -->
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/images/icons/apple-touch-icon-57x57.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="images/icons/apple-touch-icon-57x57.png"/>
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/icons/apple-touch-icon-114x114.png"/>
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/icons/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/icons/apple-touch-icon-144x144.png"/>
@@ -52,50 +52,23 @@
     <meta name="msapplication-square310x310logo" content="/images/mstile-310x310.png"/>
 
 
+
+    <style>
+        .entry > p > img {
+            max-width: 100%;
+        }
+    </style>
+
 </head>
 
 
 <body>
 <!--MAIN CONTAINER-->
-<div class="container" id="navContainer">
-    <script src="js/initialize.js"></script>
+<div class="container-custom" id="navContainer">
+    <script src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/js/initialize.js"></script>
 </div>
 
-
-<!--NAVBAR-->
-<nav class="navbar-static-top navbar-custom navbar-inner navbar-outer">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-            <ul class="nav navbar-nav">
-                <li id="homeLink"><a href="http://www.leagueofassassins.co.uk">Home <span
-                            class="sr-only">(current)</span></a></li>
-                <li id="infoLink"><a href="http://www.leagueofassassins.co.uk/info/information.php">Info</a></li>
-                <li id="rosterLink"><a href="http://www.leagueofassassins.co.uk/roster/">Roster</a></li>
-                <li id="warcraftlogsLink"><a href="https://www.warcraftlogs.com/guilds/81546/">WarcraftLogs</a></li>
-                <li id="applyLink"><a href="http://www.leagueofassassins.co.uk/apply/">Apply</a></li>
-            </ul>
-    </div>
-
-</nav>
-<!-- /.navbar-collapse -->
-</div>
-
-<!--NAV BAR OVER-->
-<div class="container main-pane">
-
-
+<div class="container-main" id="mainContainer">
     <!-- Start the Loop. -->
 
     <?php
@@ -116,7 +89,7 @@
         <div class="post">
             <?php endif; ?>
 
-            <div class="well main-well">
+            <div class="well">
 
                 <!-- Display the Title as a link to the Post's permalink. -->
 
@@ -129,7 +102,7 @@
                 <!-- Display the Post's content in a div box. -->
 
                 <div class="entry">
-                    <?php the_content(); ?>
+                   <?php the_content(); ?>
                 </div>
 
                 <hr style="background:black; border:0; height:1px"/>
@@ -175,5 +148,7 @@
 
 
     </div>
+
+
 </body>
 </html>

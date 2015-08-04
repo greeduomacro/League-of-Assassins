@@ -1,107 +1,194 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php session_start() ?>
 
-    <title>Welcome to LoA!</title>
+    <!DOCTYPE html>
+    <html>
+    <head lang="en">
 
-    <!-- JQuery -->
-    <script src="js/jquery/jquery-2.1.4.min.js"></script>
+        <meta charset="UTF-8">
+        <title>Welcome to LoA!</title>
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/applyform.js"></script>
+        <!-- External Libraries -->
 
-    <!-- Latest compiled and minified cssS -->
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+        <?php echo $_SERVER['DOCUMENT_ROOT'] ?>
+        <!-- JQuery -->
+        <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 
-    <!-- My Custom Styles -->
-    <link rel="stylesheet" href="css/navbar.css">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-    <!-- Application Form Styles -->
-    <link rel="stylesheet" href="css/main.css">
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-    <!-- Favicons for all devices -->
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/images/icons/apple-touch-icon-57x57.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/icons/apple-touch-icon-114x114.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/icons/apple-touch-icon-72x72.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/icons/apple-touch-icon-144x144.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/images/icons/apple-touch-icon-60x60.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/images/icons/apple-touch-icon-120x120.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/images/icons/apple-touch-icon-76x76.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/images/icons/apple-touch-icon-152x152.png"/>
-    <link rel="icon" type="image/png" href="/images/icons/favicon-196x196.png" sizes="196x196"/>
-    <link rel="icon" type="image/png" href="/images/icons/favicon-96x96.png" sizes="96x96"/>
-    <link rel="icon" type="image/png" href="/images/icons/favicon-32x32.png" sizes="32x32"/>
-    <link rel="icon" type="image/png" href="/images/icons/favicon-16x16.png" sizes="16x16"/>
-    <link rel="icon" type="image/png" href="/images/icons/favicon-128.png" sizes="128x128"/>
-    <meta name="application-name" content="&nbsp;"/>
-    <meta name="msapplication-TileColor" content="#FFFFFF"/>
-    <meta name="msapplication-TileImage" content="/images/icons/mstile-144x144.png"/>
-    <meta name="msapplication-square70x70logo" content="/images/icons/mstile-70x70.png"/>
-    <meta name="msapplication-square150x150logo" content="/images/mstile-150x150.png"/>
-    <meta name="msapplication-wide310x150logo" content="/images/icons/mstile-310x150.png"/>
-    <meta name="msapplication-square310x310logo" content="/images/icons/mstile-310x310.png"/>
+        <!-- Local Libraries -->
+
+        <!-- My Custom Styles -->
+        <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/css/navbar.css">
+        <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/css/main.css">
 
 
-</head>
+        <!-- Favicons for all devices -->
+        <link rel="apple-touch-icon-precomposed" sizes="57x57"
+              href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/images/icons/apple-touch-icon-57x57.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="114x114"
+              href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/images/icons/apple-touch-icon-114x114.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="72x72"
+              href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/images/icons/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="144x144"
+              href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/images/icons/apple-touch-icon-144x144.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="60x60"
+              href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/images/icons/apple-touch-icon-60x60.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="120x120"
+              href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/images/icons/apple-touch-icon-120x120.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="76x76"
+              href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/images/icons/apple-touch-icon-76x76.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="152x152"
+              href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/images/icons/apple-touch-icon-152x152.png"/>
+        <link rel="icon" type="image/png" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/images/icons/favicon-196x196.png"
+              sizes="196x196"/>
+        <link rel="icon" type="image/png" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/images/icons/favicon-96x96.png"
+              sizes="96x96"/>
+        <link rel="icon" type="image/png" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/images/icons/favicon-32x32.png"
+              sizes="32x32"/>
+        <link rel="icon" type="image/png" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/images/icons/favicon-16x16.png"
+              sizes="16x16"/>
+        <link rel="icon" type="image/png" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/images/icons/favicon-128.png"
+              sizes="128x128"/>
+        <meta name="application-name" content="&nbsp;"/>
+        <meta name="msapplication-TileColor" content="#FFFFFF"/>
+        <meta name="msapplication-TileImage" content="<?php $_SERVER['DOCUMENT_ROOT'] ?>/images/mstile-144x144.png"/>
+        <meta name="msapplication-square70x70logo"
+              content="<?php $_SERVER['DOCUMENT_ROOT'] ?>/images/mstile-70x70.png"/>
+        <meta name="msapplication-square150x150logo"
+              content="<?php $_SERVER['DOCUMENT_ROOT'] ?>/images/mstile-150x150.png"/>
+        <meta name="msapplication-wide310x150logo"
+              content="<?php $_SERVER['DOCUMENT_ROOT'] ?>/images/mstile-310x150.png"/>
+        <meta name="msapplication-square310x310logo"
+              content="<?php $_SERVER['DOCUMENT_ROOT'] ?>/images/mstile-310x310.png"/>
 
 
-<body>
+        <style>
 
-<!--MAIN CONTAINER-->
-<div class="container-custom" id="navContainer">
-    <script src="js/initialize.js"></script>
-</div>
+            .death-knight {
 
-<div class="main-container" id="mainContainer">
+            }
 
-    <div class="well main-well">
-        <h1>Application Information</h1>
+            .rogue {
 
-        <h2> League of Assassins are currently recruiting:</h2>
+            }
 
-        <h3>Ranged DPS:</h3>
-        <li style="color:red;font-weight:bold;">Hunters;</li>
-        <li>Elemental Shamans;</li>
-        <li style="color:red;font-weight:bold;">Balance Druids;</li>
-        <li>Frost or Arcane Mage with Fire OS;</li>
-        <li style="color:red;font-weight:bold;">Warlocks;</li>
-        <li>Shadow Priest;</li>
+            .paladin {
 
-        <h3>Melee DPS:</h3>
-        <li>Enhancement Shamans;</li>
-        <li>Windwalker Monks;</li>
-        <li>Rogues;</li>
+            }
 
-        <h3>Healers:</h3>
-        <li>Restoration Druids;</li>
-        <li>Restoration Shamans;</li>
-        <li>Mistweaver Monks;</li>
-        <br>
+            .priest {
 
-        <p><span style="color:red; font-weight:bold;">Bold, red classes and specs are high priority.</span></p>
-        <br>
+            }
 
-        <p>If you'd like to apply, please read the following and fill out the application below.
-            For further information please contact us at <a
-                href="mailto:contact@leagueofassassins.co.uk?Subject=Enquiry"
-                target="_top">contact@leagueofassassins.co.uk.</a></p>
+            .shaman {
 
-        <p> If your application is accepted you will be subjected to a two week trial with the rank of "Trial
-            Assassin".
-            If
-            you pass this you will be accepted into either the core team or the reserve team depending on
-            individual
-            circumstances.
-        </p><br>
+            }
 
-        <p>
+            .warlock {
 
-        </p></div>
+            }
+
+            .warrior {
+
+            }
+
+            .druid {
+
+            }
+
+            .hunter {
+
+            }
+        </style>
+    </head>
+
+    <body>
+    <!--MAIN CONTAINER-->
+    <div class="container-custom" id="navContainer">
+        <script src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/js/initialize.js"></script>
+    </div>
+
+    <div class="container-main" id="mainContainer">
 
 
-</div>
-</body>
-</html>
+        <row>
+
+
+            <div class="col-md-2">
+                <div class="well">
+                            <span
+                                style="content: url('http://puu.sh/jow3p/0799366fb1.png'); display:block; float: left; height: 66px; width: 63px;"></span>
+
+                    <p style="text-align: right;"> Pandapanda</p>
+
+                    <p style="text-align: right;">
+                                <span
+                                    style="content: url('http://puu.sh/jow3p/0799366fb1.png'); height: 15px; width: 15px;"></span>
+
+                                <span
+                                    style="content: url('http://puu.sh/jow3p/0799366fb1.png'); height: 15px; width: 15px;"></span>
+                                <span
+                                    style="content: url('http://puu.sh/jow3p/0799366fb1.png'); height: 15px; width: 15px;"></span>
+                                <span
+                                    style="content: url('http://puu.sh/jow3p/0799366fb1.png'); height: 15px; width: 15px;"></span>
+                    </p>
+                    <br>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="well">
+                            <span
+                                style="content: url('http://puu.sh/jow3p/0799366fb1.png'); display:block; float: left; height: 66px; width: 63px;"></span>
+
+                    <p style="text-align: right;"> Pandapanda</p>
+
+                    <p style="text-align: right;">
+                                <span
+                                    style="content: url('http://puu.sh/jow3p/0799366fb1.png'); height: 15px; width: 15px;"></span>
+
+                                <span
+                                    style="content: url('http://puu.sh/jow3p/0799366fb1.png'); height: 15px; width: 15px;"></span>
+                                <span
+                                    style="content: url('http://puu.sh/jow3p/0799366fb1.png'); height: 15px; width: 15px;"></span>
+                                <span
+                                    style="content: url('http://puu.sh/jow3p/0799366fb1.png'); height: 15px; width: 15px;"></span>
+                    </p>
+                    <br>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="well">
+                            <span
+                                style="content: url('http://puu.sh/jow3p/0799366fb1.png'); display:block; float: left; height: 66px; width: 63px;"></span>
+
+                    <p style="text-align: right;"> Pandapanda</p>
+
+                    <p style="text-align: right;">
+                                <span
+                                    style="content: url('http://puu.sh/jow3p/0799366fb1.png'); height: 15px; width: 15px;"></span>
+
+                                <span
+                                    style="content: url('http://puu.sh/jow3p/0799366fb1.png'); height: 15px; width: 15px;"></span>
+                                <span
+                                    style="content: url('http://puu.sh/jow3p/0799366fb1.png'); height: 15px; width: 15px;"></span>
+                                <span
+                                    style="content: url('http://puu.sh/jow3p/0799366fb1.png'); height: 15px; width: 15px;"></span>
+                    </p>
+                    <br>
+                </div>
+            </div>
+        </row>
+
+    </div>
+
+
+    </body>
+    </html>
