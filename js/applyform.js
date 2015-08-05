@@ -75,7 +75,7 @@ $(function () {
         var classSelected = document.getElementById("class").value;
         var roleSelected = document.getElementById("role").value;
         var specCombo = document.getElementById("spec");
-        var osCombo = document.getElementById("os");
+        //var osCombo = document.getElementById("os");
 
         switch (classSelected) {
 
@@ -166,9 +166,9 @@ $(function () {
             specCombo.removeChild(specCombo.lastChild);
         }
 
-        while (osCombo.hasChildNodes()) {
+        /*while (osCombo.hasChildNodes()) {
             osCombo.removeChild(osCombo.lastChild);
-        }
+        }*/
 
 
             var specElement = document.createElement("option");
@@ -176,10 +176,10 @@ $(function () {
             specElement.value = "";
             specCombo.appendChild(specElement);
 
-        var osElement = document.createElement("option");
-        osElement.textContent = "None";
-        osElement.value = "";
-        osCombo.appendChild(osElement);
+      //  var osElement = document.createElement("option");
+        //osElement.textContent = "None";
+        //osElement.value = "";
+       // osCombo.appendChild(osElement);
 
         for (var i = 0; i < specOptions.length; i++) {
             var opt = specOptions[i];
@@ -189,13 +189,13 @@ $(function () {
             specCombo.appendChild(el);
         }
 
-        for (var i = 0; i < specOptions.length; i++) {
+     /*   for (var i = 0; i < specOptions.length; i++) {
             var opt = specOptions[i];
             var el = document.createElement("option");
             el.textContent = opt;
             el.value = opt;
             osCombo.appendChild(el);
-        }
+        }*/
 
 
     });

@@ -122,6 +122,7 @@
 </head>
 
 <body>
+
 <!--MAIN CONTAINER-->
 <div class="container-custom" id="navContainer">
     <script src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/js/initialize.js"></script>

@@ -4,76 +4,91 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Welcome to LoA!</title>
 
+    <!-- External Libraries -->
+
     <!-- JQuery -->
-    <script src="../js/jquery/jquery-2.1.4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
-
-    <!-- My Custom Styles -->
-    <link rel="stylesheet" href="../css/navbar.css">
-
-    <!-- Application Form Styles -->
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
     <!-- Latest compiled and minified JavaScript -->
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/applyform.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    §
+    <!-- Local Libraries -->
+
+    <!-- My Custom Styles -->
+    <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/css/navbar.css">
+    <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/css/main.css">
+
+    <script src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/js/applyform.js"></script>
 
     <!-- Favicons for all devices -->
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../images/icons/apple-touch-icon-57x57.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../images/icons/apple-touch-icon-114x114.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../images/icons/apple-touch-icon-72x72.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../images/icons/apple-touch-icon-144x144.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="../images/icons/apple-touch-icon-60x60.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../images/icons/apple-touch-icon-120x120.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="../images/icons/apple-touch-icon-76x76.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../images/icons/apple-touch-icon-152x152.png"/>
-    <link rel="icon" type="image/png" href="../images/icons/favicon-196x196.png" sizes="196x196"/>
-    <link rel="icon" type="image/png" href="../images/icons/favicon-96x96.png" sizes="96x96"/>
-    <link rel="icon" type="image/png" href="../images/icons/favicon-32x32.png" sizes="32x32"/>
-    <link rel="icon" type="image/png" href="../images/icons/favicon-16x16.png" sizes="16x16"/>
-    <link rel="icon" type="image/png" href="../images/icons/favicon-128.png" sizes="128x128"/>
+    <link rel="apple-touch-icon-precomposed" sizes="57x57"
+          href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/images/icons/apple-touch-icon-57x57.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
+          href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/images/icons/apple-touch-icon-114x114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"
+          href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/images/icons/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144"
+          href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/images/icons/apple-touch-icon-144x144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="60x60"
+          href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/images/icons/apple-touch-icon-60x60.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="120x120"
+          href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/images/icons/apple-touch-icon-120x120.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="76x76"
+          href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/images/icons/apple-touch-icon-76x76.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="152x152"
+          href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/images/icons/apple-touch-icon-152x152.png"/>
+    <link rel="icon" type="image/png" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/images/icons/favicon-196x196.png"
+          sizes="196x196"/>
+    <link rel="icon" type="image/png" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/images/icons/favicon-96x96.png"
+          sizes="96x96"/>
+    <link rel="icon" type="image/png" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/images/icons/favicon-32x32.png"
+          sizes="32x32"/>
+    <link rel="icon" type="image/png" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/images/icons/favicon-16x16.png"
+          sizes="16x16"/>
+    <link rel="icon" type="image/png" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/images/icons/favicon-128.png"
+          sizes="128x128"/>
     <meta name="application-name" content="&nbsp;"/>
     <meta name="msapplication-TileColor" content="#FFFFFF"/>
-    <meta name="msapplication-TileImage" content="../images/icons/mstile-144x144.png"/>
-    <meta name="msapplication-square70x70logo" content="../images/icons/mstile-70x70.png"/>
-    <meta name="msapplication-square150x150logo" content="../images/mstile-150x150.png"/>
-    <meta name="msapplication-wide310x150logo" content="../images/icons/mstile-310x150.png"/>
-    <meta name="msapplication-square310x310logo" content="../images/icons/mstile-310x310.png"/>
-
-</head>
+    <meta name="msapplication-TileImage" content="<?php $_SERVER['DOCUMENT_ROOT'] ?>/images/mstile-144x144.png"/>
+    <meta name="msapplication-square70x70logo" content="<?php $_SERVER['DOCUMENT_ROOT'] ?>/images/mstile-70x70.png"/>
+    <meta name="msapplication-square150x150logo"
+          content="<?php $_SERVER['DOCUMENT_ROOT'] ?>/images/mstile-150x150.png"/>
+    <meta name="msapplication-wide310x150logo" content="<?php $_SERVER['DOCUMENT_ROOT'] ?>/images/mstile-310x150.png"/>
+    <meta name="msapplication-square310x310logo"
+          content="<?php $_SERVER['DOCUMENT_ROOT'] ?>/images/mstile-310x310.png"/>
 
 
 <body>
 
 <!--MAIN CONTAINER-->
 <div class="container-custom" id="navContainer">
-    <script src="../js/initialize.js"></script>
+    <script src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/js/initialize.js"></script>
 </div>
 
-<div class="custom-container" style="padding-top: 10px">
+<div class="container-main">
+
     <div class="well main-well">
         <h1>Application Information</h1>
 
         <h2> League of Assassins are currently recruiting:</h2>
 
         <h3>Ranged DPS:</h3>
-        <li style="color:red;font-weight:bold;">Hunters;</li>
+        <li style="color:red;font-weight:bold;">One Hunter;</li>
         <li>Elemental Shamans;</li>
         <li style="color:red;font-weight:bold;">Balance Druids;</li>
         <li>Frost or Arcane Mage with Fire OS;</li>
         <li style="color:red;font-weight:bold;">Warlocks;</li>
-        <li>Shadow Priest;</li>
 
         <h3>Melee DPS:</h3>
         <li>Enhancement Shamans;</li>
         <li>Windwalker Monks;</li>
         <li>Rogues;</li>
+        <li>One Retribution Paladin</li>
 
         <h3>Healers:</h3>
         <li>Restoration Druids;</li>
@@ -84,7 +99,7 @@
         <p><span style="color:red; font-weight:bold;">Bold, red classes and specs are high priority.</span></p>
         <br>
 
-        <p>If you'd like to apply, please read the following and fill out the application below.
+        <p>If you'd like to apply, please read the following (<a href="http://www.leagueofassassins.co.uk/info/expectations.php">this</a> & <a href="http://www.leagueofassassins.co.uk/info/trial.php">this</a>) and fill out the application below.
             For further information please contact us at <a
                 href="mailto:contact@leagueofassassins.co.uk?Subject=Enquiry"
                 target="_top">contact@leagueofassassins.co.uk.</a></p>
@@ -167,10 +182,10 @@
                 <option value="">Please Select a Spec</option>
             </select>
 
-            <label for="os">Off-Spec:</label>
+           <!-- <label for="os">Off-Spec:</label>
             <select id="os" name="os">
                 <option value="">None</option>
-            </select>
+            </select>-->
 
             <label for="ilvl">Current Item Level: <span class="required">*</span></label>
             <input id="ilvl" name="ilvl" value="" placeholder="123" required="required"/>
